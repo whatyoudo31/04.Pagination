@@ -11,10 +11,10 @@ function App() {
 
   const handleTogglebookMark = (userId) => {
     const newUsers = [...users];
-    const currentUser = newUsers.find((user) => userId == user._id);
-    currentUser.status == "true"
-      ? (currentUser.status = "false")
-      : (currentUser.status = "true");
+    const currentUser = newUsers.find((user) => userId === user._id);
+    currentUser.status === true
+      ? (currentUser.status = false)
+      : (currentUser.status = true);
     setUsers(newUsers);
   };
   return (
